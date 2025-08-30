@@ -3,12 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  server: {
-    fs: {
-      strict: false
-    }
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom']
-  }
+  base: '/My-Store/', // Sirf repo name use karein
 })
