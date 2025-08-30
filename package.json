@@ -23,7 +23,7 @@
     "tailwindcss": "^4.1.12",
     "vite": "^4.4.5"
   },
-  "engines": {
-    "node": "18.x"
+   "engines": {
+    "node": "22.x"
   }
 }
