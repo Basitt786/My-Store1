@@ -1,0 +1,114 @@
+{
+  "kitchen_items": [
+    {
+      "id": 1,
+      "name": "Non-stick Frying Pan",
+      "category": "Cookware",
+      "price": 1299,
+      "image": "https://picsum.photos/400/300?random=1",
+      "description": "Premium non-stick coating frying pan for healthy cooking",
+      "brand": "Chef Pro",
+      "rating": 4.5,
+      "inStock": true
+    },
+    {
+      "id": 2,
+      "name": "Electric Rice Cooker",
+      "category": "Appliances",
+      "price": 2499,
+      "image": "https://picsum.photos/400/300?random=2",
+      "description": "Automatic rice cooker with keep warm function",
+      "brand": "Kitchen Master",
+      "rating": 4.3,
+      "inStock": true
+    },
+    {
+      "id": 3,
+      "name": "Stainless Steel Knife Set",
+      "category": "Cutlery",
+      "price": 899,
+      "image": "https://picsum.photos/400/300?random=3",
+      "description": "Sharp stainless steel knives set of 6 pieces",
+      "brand": "Sharp Edge",
+      "rating": 4.7,
+      "inStock": false
+    },
+    {
+      "id": 4,
+      "name": "Glass Mixing Bowl Set",
+      "category": "Utensils",
+      "price": 749,
+      "image": "https://picsum.photos/400/300?random=4",
+      "description": "Heat resistant glass mixing bowls set of 3",
+      "brand": "Glass Works",
+      "rating": 4.2,
+      "inStock": true
+    },
+    {
+      "id": 5,
+      "name": "Electric Kettle",
+      "category": "Appliances",
+      "price": 1599,
+      "image": "https://picsum.photos/400/300?random=5",
+      "description": "Fast boiling electric kettle with auto shut-off",
+      "brand": "Quick Boil",
+      "rating": 4.4,
+      "inStock": true
+    },
+    {
+      "id": 6,
+      "name": "Wooden Cutting Board",
+      "category": "Accessories",
+      "price": 499,
+      "image": "https://picsum.photos/400/300?random=6",
+      "description": "Natural bamboo cutting board, eco-friendly",
+      "brand": "Nature Wood",
+      "rating": 4.6,
+      "inStock": true
+    },
+    {
+      "id": 7,
+      "name": "Pressure Cooker",
+      "category": "Cookware",
+      "price": 1899,
+      "image": "https://picsum.photos/400/300?random=7",
+      "description": "Aluminum pressure cooker 5 liter capacity",
+      "brand": "Pressure King",
+      "rating": 4.1,
+      "inStock": true
+    },
+    {
+      "id": 8,
+      "name": "Measuring Cups Set",
+      "category": "Utensils",
+      "price": 299,
+      "image": "https://picsum.photos/400/300?random=8",
+      "description": "Plastic measuring cups and spoons set",
+      "brand": "Measure Pro",
+      "rating": 4.0,
+      "inStock": true
+    },
+    {
+      "id": 9,
+      "name": "Hand Blender",
+      "category": "Appliances",
+      "price": 1199,
+      "image": "https://picsum.photos/400/300?random=9",
+      "description": "Powerful hand blender with multiple attachments",
+      "brand": "Blend Master",
+      "rating": 4.3,
+      "inStock": false
+    },
+    {
+      "id": 10,
+      "name": "Silicone Spatula Set",
+      "category": "Utensils",
+      "price": 399,
+      "image": "https://picsum.photos/400/300?random=10",
+      "description": "Heat resistant silicone spatulas set of 4",
+      "brand": "Flexi Cook",
+      "rating": 4.5,
+      "inStock": true
+    }
+  ]
+}
