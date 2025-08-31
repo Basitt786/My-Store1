@@ -30,6 +30,7 @@ import { dealCardApi } from "./Api/DealCardApi";
 import CartPage from "./components/Ui/CartPage";
 import LoginPage, { fulldata } from "./components/Ui/LoginPage";
 import ContactForm, { contactdata } from "./components/Ui/ContactForm";
+import { CartProvider } from "./pages/Cart-Context";
 
 
 
@@ -136,7 +137,11 @@ import ContactForm, { contactdata } from "./components/Ui/ContactForm";
 
 
 const App = () => {
-  return <RouterProvider  router={Result} />
+  return(
+  <CartProvider>
+  <RouterProvider  router={Result} />
+  </CartProvider>
+  )
  
 }
 

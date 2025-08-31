@@ -142,7 +142,7 @@ export function Header() {
                 {Cartbtn && (
               <>
                 <div onClick={tooglethree} className="fixed inset-0  z-40"></div>
-                <div className="absolute top-1 left-1 right-3 h-[95vh]  w-87 bg-white rounded-2xl shadow-2xl z-50 p-6 animate-slideIn">
+                <div className="absolute top-1 left-1 right-3 h-[120vh]  w-87 bg-white rounded-2xl shadow-2xl z-50 p-6 animate-slideIn">
                   <button onClick={tooglethree} className="mb-4 bg-red-600 text-white px-4 py-2 rounded-lg">✕</button>
                   <CartPage />
                 </div>
