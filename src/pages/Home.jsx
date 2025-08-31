@@ -3,6 +3,7 @@ import { FaAngleDoubleRight } from "react-icons/fa";
 import { FaAngleDoubleLeft } from "react-icons/fa";
 import { IoIosArrowUp } from "react-icons/io";
 import { MdUnfoldMoreDouble } from "react-icons/md";
+import { MdDoubleArrow } from "react-icons/md";
 
 export function Home() {
 const images = [
@@ -166,18 +167,47 @@ const images = [
 </div>
 </div>
 
+<div class="flex flex-col items-center justify-center px-4 py-12 bg-gradient-to-r from-indigo-500 to-cyan-500 text-white rounded-2xl shadow-lg">
+  <h1 class="text-3xl sm:text-4xl font-bold mb-4 text-center">
+    Effective My-Store
+  </h1>
+  <div class="max-w-2xl text-center mb-8">
+    <p class="text-base sm:text-lg leading-relaxed">
+      Explain how My-Store provides small businesses with access to global markets, 
+      expanding their customer base and reach beyond physical limitation.
+    </p>
+  </div>
 
-
-
-<div className="flex flex-col justify-end items-center min-h-screen p-4">
-  <div className="overflow-hidden rounded-2xl shadow-xl transition-transform duration-500 hover:scale-105 hover:shadow-2xl">
+  
+  <div class="overflow-hidden rounded-2xl shadow-xl transition-transform duration-500 hover:scale-105 hover:shadow-2xl">
     <img 
       src="/pics/JKimg2.jpg" 
       alt="JK Image" 
-      className="w-[50rem] h-auto object-cover rounded-2xl transform transition-transform duration-500 hover:scale-110"
+      class="w-full max-w-3xl h-auto object-cover rounded-2xl transform transition-transform duration-500 hover:scale-110"
     />
   </div>
 </div>
+<div className="flex flex-col md:flex-row items-center justify-between gap-8 p-6">
+
+  {/* Arrow Section */}
+  <div className="flex flex-wrap justify-center md:justify-start gap-6">
+    <MdDoubleArrow className="text-4xl sm:text-5xl text-indigo-500 drop-shadow-md animate-bounce hover:scale-110 hover:text-cyan-400 transition duration-300" />
+    <MdDoubleArrow className="text-4xl sm:text-5xl text-indigo-500 drop-shadow-md animate-bounce hover:scale-110 hover:text-cyan-400 transition duration-300 delay-100" />
+    <MdDoubleArrow className="text-4xl sm:text-5xl text-indigo-500 drop-shadow-md animate-bounce hover:scale-110 hover:text-cyan-400 transition duration-300 delay-200" />
+    <MdDoubleArrow className="text-4xl sm:text-5xl text-indigo-500 drop-shadow-md animate-bounce hover:scale-110 hover:text-cyan-400 transition duration-300 delay-300" />
+  </div>
+
+  {/* Image Section */}
+  <div className="overflow-hidden rounded-2xl shadow-2xl hover:shadow-cyan-500/40 transition duration-500 hover:scale-105">
+    <img 
+      src="/pics/Imagework.jpg" 
+      alt="work" 
+      className="w-[12rem] h-[18rem] sm:w-[15rem] sm:h-[22rem] md:w-[18rem] md:h-[24rem] object-cover rounded-2xl transform hover:scale-110 transition duration-500"
+    />
+  </div>
+</div>
+
+          
 
   
 
