@@ -1,0 +1,188 @@
+.oneline-fourcard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* ek line me 4 card */
+  gap: 20px; /* cards ke beech spacing */
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+/* Card container style */
+.list .main-Container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Hover effect */
+.list .main-Container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Image */
+.poster img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  background: #f9f9f9;
+}
+
+/* Content inside card */
+.Container {
+  padding: 15px;
+  flex-grow: 1;
+}
+
+.Main-heading {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.disc {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+  height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Price and rating */
+.contain {
+  padding: 15px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prices {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2a9d8f;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+.discount {
+  background: #ff4757;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 12px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.add-btn {
+  display: block;
+  text-align: center;
+  background: #2563eb;
+  color: #fff;
+  padding: 10px;
+  border-radius: 0 0 16px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-btn:hover {
+  background:  #00d4ff;
+}
+
+.paragraph {
+  font-size: 14px;
+  color: #e76f51;
+}
+
+.bubble-underline {
+  display: flex;
+  justify-content: center;  /* Center horizontally */
+  align-items: center;      /* Optional: center vertically if needed */
+}
+.bubble-underline h1 {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 5px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #2563eb;    
+    margin-top: 10px;
+}
+
+
+.bubble-underline h1::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(45deg, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+    animation: neural-pulse 3s ease-in-out infinite;
+}
+
+.bubble-underline h1::before {
+    content: '';
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00d4ff, transparent);
+    animation: neural-scan 2s linear infinite;
+}
+
+@keyframes neural-pulse {
+    0%, 100% { 
+        opacity: 0.7; 
+        transform: translateX(-50%) scale(1); 
+    }
+    50% { 
+        opacity: 1; 
+        transform: translateX(-50%) scale(1.05); 
+    }
+}
+
+@keyframes neural-scan {
+    0% { 
+        transform: translateX(-50%) translateY(0); 
+    }
+    100% { 
+        transform: translateX(-50%) translateY(-6px); 
+    }
+}
+
+@media (max-width: 1024px) {
+  .oneline-fourcard {
+    grid-template-columns: repeat(2, 1fr); /* Tablet me 2 cards */
+  }
+}
+
+@media (max-width: 600px) {
+  .oneline-fourcard {
+    grid-template-columns: 1fr; /* Mobile me 1 card */
+  }
+}
+
