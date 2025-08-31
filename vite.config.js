@@ -1,11 +1,12 @@
 
+
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/', // Netlify ke liye root path
-  build: {
-    outDir: 'dist'
+  base: '/My-Store/',
+  server: {
+    port: 5173
   }
 })
