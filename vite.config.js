@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/My-Store/',
+  base: '/',  // Vercel ke liye root path
   server: {
     port: 5173
   }
