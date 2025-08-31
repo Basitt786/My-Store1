@@ -132,12 +132,7 @@ import ContactForm, { contactdata } from "./components/Ui/ContactForm";
 
 
     
-  ],{
-       basename: "/My-Store",  
-       future: {
-    v7_startTransition: true  // Yeh line add karein warning hatane ke liye
-  }// Yeh line add karein
-      },)
+  ],)
 
 
 const App = () => {
