@@ -1,9 +1,14 @@
 import { useLoaderData } from "react-router-dom"
+
 import Card from "../components/Ui/Card";
+// import { useHomeGetApi } from "../hooks/useHomeGetApi";
+
 import "../components/Ui/Card.css"
+
 export function Men() {
+ 
   const datta = useLoaderData();
-  // console.log(datta);
+ 
   if (!datta) {
    return <h1>Loading...</h1>
     

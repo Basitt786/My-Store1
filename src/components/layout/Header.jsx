@@ -136,18 +136,39 @@ export function Header() {
             )} */}
 
             
-              <button onClick={tooglethree} className="bg-gradient-to-r from-teal-400 to-indigo-600 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:shadow-xl transition">
-              🛒 Cart
-            </button>
-                {Cartbtn && (
-              <>
-                <div onClick={tooglethree} className="fixed inset-0  z-40"></div>
-                <div className="absolute top-1 left-1 right-3 h-[120vh]  w-87 bg-white rounded-2xl shadow-2xl z-50 p-6 animate-slideIn">
-                  <button onClick={tooglethree} className="mb-4 bg-red-600 text-white px-4 py-2 rounded-lg">✕</button>
-                  <CartPage />
-                </div>
-              </>
-            )}
+           <button 
+  onClick={tooglethree} 
+  className="bg-gradient-to-r from-teal-400 to-indigo-600 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:shadow-xl transition"
+>
+  🛒 Cart
+</button>
+
+{Cartbtn && (
+  <>
+    {/* Overlay */}
+    <div 
+      onClick={tooglethree} 
+      className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40"
+    ></div>
+
+    {/* Cart Sidebar */}
+    <div className="fixed top-0 right-0 h-full w-full sm:w-96 md:w-[28rem] bg-white rounded-l-2xl shadow-2xl z-50 p-4 overflow-y-auto animate-slideIn">
+      <div className="flex justify-between items-center mb-4">
+        <h2 className="text-lg font-bold text-gray-800">Your Cart</h2>
+        <button 
+          onClick={tooglethree} 
+          className="bg-red-600 text-white px-3 py-1 rounded-lg hover:bg-red-700"
+        >
+          ✕
+        </button>
+      </div>
+
+      {/* Cart Page Component */}
+      <CartPage />
+    </div>
+  </>
+)}
+
             
 
 

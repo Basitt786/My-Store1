@@ -3,53 +3,63 @@ import { useCart } from "../../pages/Cart-Context";
 export default function CartPage() {
   const { cart, removeFromCart, increaseQuantity, decreaseQuantity } = useCart();
 
-  const total = cart ? cart.reduce((sum, item) => sum + item.price * item.quantity, 0) : 0;
+  const total = cart
+    ? cart.reduce((sum, item) => sum + item.price * item.quantity, 0)
+    : 0;
 
   return (
-    <div className="w-full max-w-5xl mx-auto p-4">
-      <h2 className="text-3xl font-bold text-center text-indigo-600 mb-8">
+    <div className="w-full h-full flex flex-col">
+      {/* Heading */}
+      <h2 className="text-2xl md:text-3xl font-bold text-center text-indigo-600 mb-4">
         Your Cart
       </h2>
 
+      {/* Empty Cart */}
       {!cart || cart.length === 0 ? (
-        <p className="text-center text-gray-500 text-lg">Your cart is empty</p>
+        <p className="text-center text-gray-500 text-lg flex-1 flex items-center justify-center">
+          Your cart is empty 🛒
+        </p>
       ) : (
         <>
-          <div className="space-y-6">
-            {cart.map(item => (
+          {/* ✅ Cart Items (scrollable area) */}
+          <div className="flex-1 space-y-4 overflow-y-auto pr-1">
+            {cart.map((item) => (
               <div
                 key={item.id}
-                className="flex flex-col md:flex-row items-center justify-between bg-white p-4 rounded-xl shadow-lg border hover:shadow-2xl transition-shadow duration-300"
+                className="flex flex-col md:flex-row items-center md:items-start gap-4 bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition"
               >
                 {/* Image */}
-                <div className="w-full md:w-40 flex justify-center md:justify-end mb-4 md:mb-0">
+                <div className="flex-shrink-0">
                   <img
-                    src={item.images || item.image}
+                    src={item.image}
                     alt={item.title || item.name}
-                    className="w-32 h-32 object-cover rounded-lg"
+                    className="w-24 h-24 sm:w-28 sm:h-28 object-cover rounded-lg border"
                   />
                 </div>
 
-                {/* Product Info */}
-                <div className="flex-1 md:ml-6 text-center md:text-left">
-                  <h3 className="font-semibold text-xl text-gray-800 mb-1">
+                {/* Product Info + Quantity */}
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="font-semibold text-lg text-gray-800 mb-1">
                     {item.title || item.name}
                   </h3>
-                  <p className="text-gray-600 text-lg">
-                    ${item.price.toFixed(2)} × {item.quantity} = ${(item.price * item.quantity).toFixed(2)}
+                  <p className="text-gray-600">
+                    ${item.price.toFixed(2)} × {item.quantity} ={" "}
+                    <span className="font-medium text-gray-900">
+                      ${(item.price * item.quantity).toFixed(2)}
+                    </span>
                   </p>
-                  
+
                   {/* Quantity Controls */}
                   <div className="flex items-center justify-center md:justify-start space-x-2 mt-3">
                     <button
-                      className="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300 transition"
+                      className="px-3 py-1 bg-gray-100 rounded hover:bg-gray-200"
                       onClick={() => decreaseQuantity(item.id)}
                     >
-                      -
+                      −
                     </button>
                     <span className="px-3 font-medium">{item.quantity}</span>
                     <button
-                      className="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300 transition"
+                      className="px-3 py-1 bg-gray-100 rounded hover:bg-gray-200"
                       onClick={() => increaseQuantity(item.id)}
                     >
                       +
@@ -58,22 +68,25 @@ export default function CartPage() {
                 </div>
 
                 {/* Remove Button */}
-                <button
-                  className="mt-3 md:mt-0 text-red-500 hover:text-red-700 px-4 py-2 border border-red-300 rounded transition"
-                  onClick={() => removeFromCart(item.id)}
-                >
-                  Remove
-                </button>
+                <div className="flex-shrink-0 mt-5 ml-3">
+                  <button
+                    className="text-red-500 hover:text-red-700 px-4 py-2 border border-red-300 rounded-lg transition"
+                    onClick={() => removeFromCart(item.id)}
+                  >
+                    Remove
+                  </button>
+                </div>
               </div>
             ))}
           </div>
 
-          {/* Summary */}
-          <div className="mt-10 bg-indigo-50 p-6 rounded-xl shadow-lg flex flex-col md:flex-row items-center justify-between">
-            <span className="text-xl font-semibold text-gray-800">
-              Total: ${total.toFixed(2)}
+          {/* ✅ Checkout Summary (ALWAYS outside map) */}
+          <div className="sticky bottom-0 bg-indigo-50 p-4 rounded-t-xl shadow-md flex flex-col md:flex-row items-center justify-between gap-4">
+            <span className="text-lg md:text-xl font-semibold text-gray-800">
+              Total:{" "}
+              <span className="text-indigo-600">${total.toFixed(2)}</span>
             </span>
-            <button className="mt-4 md:mt-0 w-full md:w-auto bg-indigo-600 text-white py-3 px-6 rounded-xl hover:bg-indigo-700 transition">
+            <button className="w-full md:w-auto bg-indigo-600 text-white py-3 px-6 rounded-xl hover:bg-indigo-700 transition">
               Checkout
             </button>
           </div>
@@ -82,4 +95,3 @@ export default function CartPage() {
     </div>
   );
 }
-

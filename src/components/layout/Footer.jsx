@@ -9,7 +9,7 @@ export function Footer() {
           
           {/* About Section */}
           <div className="max-w-xs">
-            <h3 className="text-xl font-bold text-indigo-600 mb-4">ShopMate</h3>
+            <h3 className="text-xl font-bold text-indigo-600 mb-4">My Store</h3>
             <p className="text-white">
               Your one-stop online store for the latest trends in fashion,
               electronics, and home essentials.

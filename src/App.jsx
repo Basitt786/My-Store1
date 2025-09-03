@@ -31,6 +31,7 @@ import CartPage from "./components/Ui/CartPage";
 import LoginPage, { fulldata } from "./components/Ui/LoginPage";
 import ContactForm, { contactdata } from "./components/Ui/ContactForm";
 import { CartProvider } from "./pages/Cart-Context";
+// import { useHomGetApi } from "./Api/useHomGetApi";
 
 
 
@@ -45,7 +46,7 @@ import { CartProvider } from "./pages/Cart-Context";
       {
         path: "/",
         element: <Home />,
-        loader: HomGetapi,
+        loader: HomeGetApi,
       },
 
       {

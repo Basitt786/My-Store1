@@ -8,6 +8,10 @@ export const HomGetapi = async() => {
     } catch (error) {
         console.log(error);
         return []
+
+
+
         
     }
 }
+
